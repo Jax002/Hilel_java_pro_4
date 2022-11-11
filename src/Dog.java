@@ -1,9 +1,13 @@
 public class Dog extends Animal{
-    public Dog(){
+
+
+    public Dog(String name){
+        super(name);
         count_dog++;
+        this.name=name;
     }
     private static int count_dog;
-
+    private String name;
     public static int getCount_dog() {
         return count_dog;
     }
@@ -12,9 +16,9 @@ public class Dog extends Animal{
     public void run(int a) {
 
         if (a<501) {
-            System.out.printf("Собака пробежала %s м. \n",a);
+            System.out.printf("%s пробежал %s м. \n",name,a);
         } else {
-            System.out.println("Собака пробежала 500 м. и устала");
+            System.out.printf("%s пробежал 500 м. и устала \n",name);
         }
     }
 
@@ -22,9 +26,9 @@ public class Dog extends Animal{
     public void swim(int a) {
 
         if (a<11) {
-            System.out.printf("Собака проплыла %s м. \n",a);
+            System.out.printf("%s проплыл %s м. \n",name,a);
         } else {
-            System.out.println("Собакак отказалась плыть так много");
+            System.out.printf("%s отказался плыть так много \n",name);
         }
 
     }

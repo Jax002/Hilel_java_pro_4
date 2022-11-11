@@ -3,7 +3,7 @@ public abstract class Animal {
         return count_animal;
     }
 
-    public Animal(){
+    public Animal(String name){
         count_animal++;
     }
     private static int count_animal;
